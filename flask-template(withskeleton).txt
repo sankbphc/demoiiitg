@@ -1,0 +1,28 @@
+FILE NAME
+hello.py
+1. WHAT IT DOES
+Tests a new Flask installation.
+ 
+
+Libraries:
+from flask import Flask
+
+A simple web page served by this flask application in the user's browser.
+ // 9. COMMENTS
+--
+ // 10. END
+'''
+
+
+from flask import Flask
+from flask import render_template
+
+app = Flask(__name__)
+app.debug = True
+
+@app.route("/")
+def hello():
+    return render_template('hello.html', message="Hello World!")
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
